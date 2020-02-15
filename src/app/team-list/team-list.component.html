@@ -1,0 +1,9 @@
+<h1>Team list</h1>
+
+<p i18n *ngIf="loading">Loading...</p>
+
+<ul>
+  <li i18n *ngFor="let team of teamList">
+    {{team.name}} from {{team.institutionName}} in category {{team.category.name}}
+  </li>
+</ul>

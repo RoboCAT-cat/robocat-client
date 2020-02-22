@@ -6,7 +6,7 @@ import { Environment } from './environment_interface';
 
 export const environment: Environment = {
   production: false,
-  graphql_uri: "//localhost:8000/graphql"
+  graphql_uri: "//localhost:8000/graphql/"
 };
 
 /*

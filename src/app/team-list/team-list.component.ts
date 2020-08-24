@@ -1,7 +1,8 @@
+import {Apollo, gql} from 'apollo-angular';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Apollo } from 'apollo-angular';
+
 import { Subscription } from 'rxjs';
-import gql from 'graphql-tag';
+
 
 interface Team {
   name: string;
@@ -46,7 +47,9 @@ export class TeamListComponent implements OnInit, OnDestroy {
       query: teamListQuery
     }).valueChanges.subscribe(({data, loading, errors}) => {
       this.loading = loading;
-      this.teamList = data.allTeams;
+      if (data) {
+        this.teamList = data.allTeams;
+      }
       console.log(data);
       if (errors) {
         console.error(errors);

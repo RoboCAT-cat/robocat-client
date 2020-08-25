@@ -4,7 +4,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {InMemoryCache} from '@apollo/client/core';
 import {NgModule} from '@angular/core';
 
-const uri = "/_/graphql/";
+const uri = "/_/graphql";
 
 function createApollo(httpLink: HttpLink) {
   return {
